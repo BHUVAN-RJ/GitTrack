@@ -9,91 +9,454 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
             color: #333;
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
+            padding: 0;
+            background-color: #fff;
+        }
+        .banner {
+            width: 100%;
+            background: linear-gradient(135deg, #3d3d4e 0%, #2a2a38 100%);
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 0;
+        }
+        .banner img {
+            max-width: 440px;
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .content-wrapper {
             padding: 20px;
         }
-        h1, h2 {
-            border-bottom: 1px solid #eaeaea;
+        h1 {
+            color: #3d3d4e;
+            border-bottom: 3px solid #3d3d4e;
             padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: #3d3d4e;
+            border-bottom: 1px solid #d0d7de;
+            padding-bottom: 8px;
+            margin-top: 32px;
+        }
+        h3 {
+            color: #1f2328;
+            margin-top: 24px;
         }
         .container {
-            padding: 1rem;
-            background-color: #f9f9f9;
-            border: 1px solid #eaeaea;
-            border-radius: 5px;
+            padding: 16px;
+            background-color: #f6f8fa;
+            border: 1px solid #d0d7de;
+            border-radius: 6px;
+            margin-bottom: 24px;
+        }
+        .highlight-box {
+            padding: 16px;
+            background-color: #dff6dd;
+            border-left: 4px solid #2da44e;
+            border-radius: 6px;
+            margin: 16px 0;
+        }
+        .warning-box {
+            padding: 16px;
+            background-color: #fff8c5;
+            border-left: 4px solid #fb8500;
+            border-radius: 6px;
+            margin: 16px 0;
         }
         code {
-            background-color: #eee;
-            padding: 2px 4px;
+            background-color: #f6f8fa;
+            padding: 3px 6px;
             border-radius: 3px;
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        ul, ol {
+            padding-left: 24px;
+        }
+        li {
+            margin: 8px 0;
+        }
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            background-color: #fff;
+        }
+        .data-table th, .data-table td {
+            border: 1px solid #d0d7de;
+            padding: 12px;
+            text-align: left;
+        }
+        .data-table th {
+            background-color: #f6f8fa;
+            font-weight: 600;
+        }
+        .data-table tr:nth-child(even) {
+            background-color: #f6f8fa;
+        }
+        strong {
+            color: #1f2328;
+        }
+        a {
+            color: #3d3d4e;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: #2a2a38;
+        }
+        .metadata {
+            font-size: 0.9em;
+            color: #57606a;
+            margin-bottom: 24px;
         }
     </style>
 </head>
 <body>
-
+    <div class="banner">
+        <img src="promo-small-440x280.png" alt="GitTrack - Job Application Tracker">
+    </div>
+    
+    <div class="content-wrapper">
     <header>
         <h1>Privacy Policy for GitTrack</h1>
-        <p><strong>Effective Date:</strong> October 14, 2025</p>
+        <p class="metadata"><strong>Effective Date:</strong> December 12, 2025</p>
+        <p class="metadata"><strong>Last Updated:</strong> December 12, 2025</p>
     </header>
-
+    
     <main>
         <div class="container">
             <p>
-                Hello! This page explains the privacy policy for the <strong>GitTrack</strong> Chrome Extension.
+                Welcome! This privacy policy explains how the <strong>GitTrack</strong> Chrome Extension collects, uses, stores, and protects your data.
             </p>
             <p>
-                We believe in privacy and transparency. Our goal is to create a useful tool while respecting your data. The extension is designed to work entirely on your computer.
+                We believe in <strong>privacy by design</strong> and <strong>transparency</strong>. GitTrack is built to work primarily on your device, with optional cloud features that you can choose to enable.
             </p>
         </div>
 
-        <h2>Permissions and Data Usage</h2>
-        <p>The extension requests the following permissions:</p>
+        <div class="highlight-box">
+            <strong>🔒 Core Privacy Principle:</strong> Your job application data stays on your device unless you explicitly choose to enable social features. Even then, only aggregate statistics (not individual job details) are synced.
+        </div>
 
+        <h2>1. Data We Collect</h2>
+        
+        <h3>1.1 Local Data (Stored on Your Device Only)</h3>
+        <p>The extension collects and stores the following information <strong>locally on your computer</strong> using Chrome's storage API:</p>
+        
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Data Type</th>
+                    <th>What We Collect</th>
+                    <th>Purpose</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Job Applications</strong></td>
+                    <td>Company name, job title, location, description, application URL, application date, status (applied/interviewing/rejected/accepted)</td>
+                    <td>To track your job applications and display them in your dashboard</td>
+                </tr>
+                <tr>
+                    <td><strong>Interview Details</strong></td>
+                    <td>Interview rounds, formats, dates, and notes</td>
+                    <td>To help you manage interview schedules</td>
+                </tr>
+                <tr>
+                    <td><strong>Rejection Information</strong></td>
+                    <td>Rejection reason, rejection date</td>
+                    <td>To track patterns and learn from rejections</td>
+                </tr>
+                <tr>
+                    <td><strong>Offer Details</strong></td>
+                    <td>Salary, start date, acceptance date</td>
+                    <td>To manage job offers you've received</td>
+                </tr>
+                <tr>
+                    <td><strong>User Preferences</strong></td>
+                    <td>Dashboard layout, column preferences, streak goals, freeze usage</td>
+                    <td>To personalize your experience</td>
+                </tr>
+                <tr>
+                    <td><strong>Activity Log</strong></td>
+                    <td>Recent actions (last 100 activities)</td>
+                    <td>To show your recent tracking activity</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="highlight-box">
+            <strong>✅ Important:</strong> This data is stored using <code>chrome.storage.local</code>, which means it stays on your device and is never automatically sent to any server. We (the developers) have <strong>absolutely no access</strong> to this data.
+        </div>
+
+        <h3>1.2 Optional Data (Synced to Cloud Only If You Enable Social Features)</h3>
+        <p>If you choose to enable social features by providing your email address, the following <strong>aggregate statistics only</strong> are synced to our Supabase backend:</p>
+        
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Data Type</th>
+                    <th>What We Sync</th>
+                    <th>Purpose</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Email Address</strong></td>
+                    <td>Your email (used as identifier)</td>
+                    <td>To enable social features and identify your account</td>
+                </tr>
+                <tr>
+                    <td><strong>Application Statistics</strong></td>
+                    <td>Count of total applications, rejections, interviews, and accepted offers</td>
+                    <td>To show global statistics and enable friend comparisons</td>
+                </tr>
+                <tr>
+                    <td><strong>Streak Data</strong></td>
+                    <td>Daily application count, current streak, longest streak, freeze usage, last 5 days of history</td>
+                    <td>To enable streak sharing with friends and gamification features</td>
+                </tr>
+                <tr>
+                    <td><strong>Activity Timestamps</strong></td>
+                    <td>Last active timestamp, last sync timestamp</td>
+                    <td>To show who's currently online and maintain sync state</td>
+                </tr>
+                <tr>
+                    <td><strong>Display Name</strong></td>
+                    <td>Optional display name for social features</td>
+                    <td>To show your name to friends (if you choose to add friends)</td>
+                </tr>
+                <tr>
+                    <td><strong>Community Alerts</strong></td>
+                    <td>Job postings or product recommendations you share</td>
+                    <td>To enable the community alerts feature</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="warning-box">
+            <strong>⚠️ Important Note:</strong> We <strong>NEVER</strong> sync individual job details (company names, job titles, descriptions, URLs) to our servers. Only aggregate counts and statistics are synced. Your actual job application data remains private on your device.
+        </div>
+
+        <h2>2. How We Use Your Data</h2>
+        
+        <h3>2.1 Local Processing</h3>
+        <ul>
+            <li><strong>Job Tracking:</strong> To save and display your job applications across multiple platforms (LinkedIn, GitHub, JobRight, Simplify)</li>
+            <li><strong>Duplicate Detection:</strong> To prevent you from applying to the same job twice</li>
+            <li><strong>Dashboard Visualization:</strong> To show statistics, charts, and activity feeds</li>
+            <li><strong>Status Management:</strong> To track progression through application stages</li>
+        </ul>
+
+        <h3>2.2 Cloud Features (Optional)</h3>
+        <ul>
+            <li><strong>Global Statistics:</strong> To show you how your stats compare to the community</li>
+            <li><strong>Streak Tracking:</strong> To enable streak sharing with friends</li>
+            <li><strong>Community Alerts:</strong> To share and receive job postings and product recommendations</li>
+            <li><strong>Admin Features:</strong> For authorized super users to moderate community alerts</li>
+        </ul>
+
+        <h2>3. Data Scraping from Job Platforms</h2>
+        
+        <p>GitTrack automatically scrapes job information from the following platforms when you interact with job postings:</p>
+        
+        <ul>
+            <li><strong>LinkedIn:</strong> Company name, job title, location, description, application URL</li>
+            <li><strong>GitHub:</strong> Job listings from internship repositories</li>
+            <li><strong>JobRight:</strong> Company name, job title, location, description</li>
+            <li><strong>Simplify:</strong> Company name, job title, location, description, ATS links</li>
+        </ul>
+
+        <div class="highlight-box">
+            <strong>🔒 Privacy Note:</strong> This scraped data is stored <strong>locally on your device only</strong> and is never transmitted to our servers. It's used solely to populate your personal job tracker.
+        </div>
+
+        <h2>4. Permissions Explained</h2>
+        
+        <p>The extension requests the following Chrome permissions:</p>
+        
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Permission</th>
+                    <th>Why We Need It</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>storage</code></td>
+                    <td>To save your job application data locally on your device</td>
+                </tr>
+                <tr>
+                    <td><code>tabs</code></td>
+                    <td>To detect when you're on a job site and to open the tracker dashboard</td>
+                </tr>
+                <tr>
+                    <td><code>webNavigation</code></td>
+                    <td>To track navigation between job pages and detect when applications are submitted</td>
+                </tr>
+                <tr>
+                    <td><code>scripting</code></td>
+                    <td>To inject content scripts that add tracking buttons and detect duplicates</td>
+                </tr>
+                <tr>
+                    <td><strong>Host Permissions:</strong><br>
+                    <code>linkedin.com</code><br>
+                    <code>jobright.ai</code><br>
+                    <code>simplify.jobs</code><br>
+                    <code>github.com</code></td>
+                    <td>To access and scrape job data from these specific platforms</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>5. Third-Party Services</h2>
+        
+        <h3>5.1 Supabase (Cloud Backend)</h3>
+        <p>When you enable social features, we use <strong>Supabase</strong> as our cloud database provider to store:</p>
+        <ul>
+            <li>Your email address</li>
+            <li>Aggregate statistics (counts only, not individual jobs)</li>
+            <li>Streak data (last 5 days)</li>
+            <li>Community alerts you create</li>
+        </ul>
+        
+        <p><strong>Supabase Privacy:</strong> Supabase is SOC 2 Type II compliant and uses enterprise-grade security. Data is encrypted in transit (TLS) and at rest. Read more: <a href="https://supabase.com/privacy" target="_blank">https://supabase.com/privacy</a></p>
+
+        <h3>5.2 No Other Third Parties</h3>
+        <p>GitTrack does <strong>not</strong> use:</p>
+        <ul>
+            <li>❌ Analytics services (Google Analytics, Mixpanel, etc.)</li>
+            <li>❌ Advertising networks</li>
+            <li>❌ Error tracking services</li>
+            <li>❌ Any other third-party data processors</li>
+        </ul>
+
+        <h2>6. Data Security</h2>
+        
+        <h3>6.1 Local Data</h3>
+        <p>Your local job data is protected by Chrome's built-in security features. It's as secure as your computer and Chrome profile. We recommend:</p>
+        <ul>
+            <li>Using a strong password for your computer</li>
+            <li>Keeping Chrome up to date</li>
+            <li>Not sharing your computer with untrusted users</li>
+        </ul>
+
+        <h3>6.2 Cloud Data (Optional Features)</h3>
+        <ul>
+            <li><strong>Authentication:</strong> JWT tokens with HMAC-SHA256 signatures</li>
+            <li><strong>Encryption:</strong> All data transmitted to Supabase is encrypted using TLS 1.3</li>
+            <li><strong>Data Validation:</strong> Server-side validation prevents unauthorized access</li>
+            <li><strong>Rate Limiting:</strong> Protects against abuse and ensures fair usage</li>
+        </ul>
+
+        <h2>7. Data Retention</h2>
+        
+        <h3>7.1 Local Data</h3>
+        <p>Local data is stored <strong>indefinitely</strong> until you:</p>
+        <ul>
+            <li>Manually delete jobs from the tracker</li>
+            <li>Use the "Export/Import Data" feature to clear all data</li>
+            <li>Uninstall the extension</li>
+        </ul>
+
+        <h3>7.2 Cloud Data (Optional Features)</h3>
+        <ul>
+            <li><strong>User Statistics:</strong> Retained for <strong>6 months</strong> from last activity</li>
+            <li><strong>Streak Data:</strong> Retained for <strong>6 months</strong> from last sync</li>
+            <li><strong>Community Alerts:</strong> Retained for <strong>6 months</strong> from creation date</li>
+            <li><strong>Automatic Cleanup:</strong> Inactive accounts are automatically purged after 6 months</li>
+        </ul>
+
+        <h2>8. Your Rights and Choices</h2>
+        
+        <h3>8.1 Opt-In to Social Features</h3>
+        <p>Social features are <strong>completely optional</strong>. You can use GitTrack without ever providing an email address. To enable social features:</p>
         <ol>
-            <li>
-                <strong><code>storage</code></strong>: This is the most important permission we use.
-                <ul>
-                    <li>
-                        <strong>Why we need it:</strong> To save the status of job applications you track (e.g., "Applied," "Interested").
-                    </li>
-                    <li>
-                        <strong>How it's used:</strong> When you mark a job on a GitHub page, that status is saved using Chrome's built-in storage API. This allows the extension to remember your choices when you revisit the page.
-                    </li>
-                    <li>
-                        <strong>What we DON'T do:</strong> This data is stored <strong>locally on your computer only</strong>. It is never sent to any external server, and we (the developers) have absolutely no access to it. We do not collect, store, or sell any of your personal data.
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <strong><code>tabs</code></strong>:
-                <ul>
-                    <li>
-                        <strong>Why we need it:</strong> This permission helps the extension know when you are on a compatible GitHub jobs page, so it can activate its features at the right time.
-                    </li>
-                </ul>
-            </li>
+            <li>Open the GitTrack dashboard</li>
+            <li>Click on Settings</li>
+            <li>Enter your email address</li>
         </ol>
 
-        <h2>Data Security</h2>
-        <p>
-            Since all your tracking data is stored locally on your device, it is as secure as your own computer. We do not have access to it, and it never leaves your machine through our extension.
-        </p>
+        <h3>8.2 Disable Social Features</h3>
+        <p>To stop syncing data to the cloud:</p>
+        <ol>
+            <li>Open Settings</li>
+            <li>Remove your email address</li>
+        </ol>
+        <p><strong>Note:</strong> This stops future syncing but does not delete previously synced data from Supabase (see section 8.4).</p>
 
-        <h2>Changes to This Policy</h2>
-        <p>
-            We may update this privacy policy in the future. Any changes will be reflected on this page.
-        </p>
+        <h3>8.3 Export Your Data</h3>
+        <p>You can export all your local job data at any time:</p>
+        <ol>
+            <li>Click the extension icon</li>
+            <li>Click "Export Data"</li>
+            <li>Save the JSON file to your computer</li>
+        </ol>
 
-        <h2>Contact Us</h2>
-        <p>
-            If you have any questions about this privacy policy, please feel free to reach out.
-        </p>
-        <p>
-            <em>Developed by RJ45</em> <br>
-            <a href="mailto:rajanaha@usc.edu">Contact</a>
+        <h3>8.4 Data Deletion</h3>
+        <ul>
+            <li><strong>Local Data:</strong> Delete individual jobs from the tracker, or uninstall the extension to remove all local data</li>
+            <li><strong>Cloud Data:</strong> Currently, there is no automated self-service deletion. Cloud data will be automatically purged after 6 months of inactivity. If you need immediate deletion, please contact us (see section 11)</li>
+        </ul>
+
+        <h2>9. Children's Privacy</h2>
+        
+        <p>GitTrack is designed for job seekers, typically college students and professionals. We do not knowingly collect data from children under 13. If you believe a child has provided us with personal information, please contact us immediately.</p>
+
+        <h2>10. Changes to This Policy</h2>
+        
+        <p>We may update this privacy policy from time to time to reflect:</p>
+        <ul>
+            <li>New features or functionality</li>
+            <li>Changes in legal requirements</li>
+            <li>Improvements to our privacy practices</li>
+        </ul>
+        
+        <p>When we make changes:</p>
+        <ul>
+            <li>We'll update the "Effective Date" at the top of this page</li>
+            <li>For major changes, we'll notify users through the extension</li>
+            <li>Continued use of the extension after changes constitutes acceptance</li>
+        </ul>
+
+        <h2>11. Contact Us</h2>
+        
+        <p>If you have questions, concerns, or requests regarding this privacy policy or your data, please contact us:</p>
+        
+        <div class="container">
+            <p><strong>Developer:</strong> RJ45</p>
+            <p><strong>Email:</strong> <a href="mailto:rajanaha@usc.edu">rajanaha@usc.edu</a></p>
+        </div>
+
+        <h2>12. Additional Information</h2>
+        
+        <h3>12.1 Open Source</h3>
+        <p>GitTrack's source code may be made available for inspection. This transparency allows security researchers and users to verify our privacy claims.</p>
+
+        <h3>12.2 No Sale of Data</h3>
+        <p>We <strong>never</strong> sell, rent, or trade your personal information to third parties. Period.</p>
+
+        <h3>12.3 Community Features</h3>
+        <p>When you share community alerts (job postings or product recommendations), this information is visible to all GitTrack users. Please do not include sensitive personal information in alerts.</p>
+
+        <div class="highlight-box">
+            <strong>📌 Summary:</strong> GitTrack respects your privacy. Your job data stays on your device unless you choose to enable optional social features, which only sync aggregate statistics (not individual job details). We don't sell data, don't use analytics, and give you full control over your information.
+        </div>
+
+        <hr style="margin: 40px 0; border: none; border-top: 1px solid #d0d7de;">
+        
+        <p style="text-align: center; color: #57606a; font-size: 0.9em;">
+            <em>Last reviewed and updated: December 12, 2025</em>
         </p>
     </main>
-
+    </div>
 </body>
 </html>
