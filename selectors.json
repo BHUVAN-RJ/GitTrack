@@ -1,1 +1,17 @@
-
+{
+  "version": 1,
+  "lastUpdated": "2026-03-05T00:00:00Z",
+  "platforms": {
+    "jobright": {
+      "jobCard": ".job-card-flag-classname",
+      "company": ".index_company-name__gKiOY",
+      "role": ".index_job-title__UjuEY",
+      "locationItems": ".index_job-metadata-item__ThMv4",
+      "description": ".index_rating-desc__acdlU",
+      "applyButton": ".index_apply-button__Ra0JM",
+      "applicantsText": ".index_apply-time__mm_bL",
+      "actionsContainer": ".index_actions___6m2s",
+      "buttonGroup": ".index_actions-group__NWJmN"
+    }
+  }
+}
