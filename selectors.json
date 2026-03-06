@@ -1,7 +1,7 @@
 {
-  "version": 3,
+  "version": 4,
   "lastUpdated": "2026-03-06T00:00:00Z",
-  "notes": "Jobright uses partial class matching to survive CSS module hash rotations. Simplify uses data-testid + Tailwind. LinkedIn uses stable BEM classes.",
+  "notes": "Jobright uses partial class matching to survive CSS module hash rotations. Simplify uses data-testid + Tailwind. LinkedIn uses stable BEM classes. Indeed uses data-testid attrs. Handshake uses aria-label on apply button; other selectors use partial class matching due to styled-components.",
   "platforms": {
     "jobright": {
       "jobCard": ".job-card-flag-classname",
@@ -23,6 +23,22 @@
       "header": ".sticky.left-0.top-0",
       "description": ".description.whitespace-pre-wrap.break-words",
       "buttonContainer": ".hidden.w-full.items-center.justify-end.gap-x-4.sm\\:flex"
+    },
+    "indeed": {
+      "container": ".fastviewjob",
+      "role": "[data-testid='jobsearch-JobInfoHeader-title']",
+      "company": "[data-testid='inlineHeader-companyName']",
+      "location": "[data-testid='inlineHeader-companyLocation']",
+      "description": "#jobDescriptionText",
+      "applyExternal": "#applyButtonLinkContainer button",
+      "buttonsContainer": "#viewJobButtonLinkContainer"
+    },
+    "handshake": {
+      "applyButton": "button[aria-label='Apply externally']",
+      "role": "h1",
+      "company": "a[href^='/e/'][aria-label]",
+      "location": "[class*='location']",
+      "description": "[class*='job-description'], [class*='description-content']"
     },
     "linkedin": {
       "company": ".jobs-company__name, .job-details-jobs-unified-top-card__company-name",
