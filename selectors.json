@@ -1,7 +1,7 @@
 {
-  "version": 2,
+  "version": 3,
   "lastUpdated": "2026-03-06T00:00:00Z",
-  "notes": "Uses partial class matching ([class*='...')] to survive CSS module hash changes. Only update when the base class name itself changes, not just the hash suffix.",
+  "notes": "Jobright uses partial class matching to survive CSS module hash rotations. Simplify uses data-testid + Tailwind. LinkedIn uses stable BEM classes.",
   "platforms": {
     "jobright": {
       "jobCard": ".job-card-flag-classname",
@@ -13,6 +13,26 @@
       "applicantsText": "[class*='apply-time']",
       "actionsContainer": "[class*='_actions_']",
       "buttonGroup": "[class*='actions-group']"
+    },
+    "simplify": {
+      "detailPanel": "[data-testid='details-view']",
+      "company": ".text-lg.font-bold.text-secondary-400",
+      "role": ".text-xl.font-bold.text-secondary-400",
+      "location": "svg[viewBox='0 0 24 24'] ~ p",
+      "applyButton": "button:has(svg path[d*='M11.251.068'])",
+      "header": ".sticky.left-0.top-0",
+      "description": ".description.whitespace-pre-wrap.break-words",
+      "buttonContainer": ".hidden.w-full.items-center.justify-end.gap-x-4.sm\\:flex"
+    },
+    "linkedin": {
+      "company": ".jobs-company__name, .job-details-jobs-unified-top-card__company-name",
+      "role": ".jobs-save-button__text, .job-details-jobs-unified-top-card__job-title",
+      "primaryDescContainer": ".job-details-jobs-unified-top-card__primary-description-container",
+      "locationSpan": ".tvm__text--low-emphasis",
+      "saveButton": ".jobs-save-button",
+      "applyButton": ".jobs-apply-button, .jobs-s-apply__button",
+      "appliedMessage": ".artdeco-inline-feedback--success",
+      "description": "#job-details|.jobs-description__content|.jobs-description-content__text|.jobs-description__container|.description__text"
     }
   }
 }
