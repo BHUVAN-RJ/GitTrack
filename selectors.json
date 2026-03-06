@@ -1,17 +1,18 @@
 {
-  "version": 1,
-  "lastUpdated": "2026-03-05T00:00:00Z",
+  "version": 2,
+  "lastUpdated": "2026-03-06T00:00:00Z",
+  "notes": "Uses partial class matching ([class*='...')] to survive CSS module hash changes. Only update when the base class name itself changes, not just the hash suffix.",
   "platforms": {
     "jobright": {
       "jobCard": ".job-card-flag-classname",
-      "company": ".index_company-name__gKiOY",
-      "role": ".index_job-title__UjuEY",
-      "locationItems": ".index_job-metadata-item__ThMv4",
-      "description": ".index_rating-desc__acdlU",
-      "applyButton": ".index_apply-button__Ra0JM",
-      "applicantsText": ".index_apply-time__mm_bL",
-      "actionsContainer": ".index_actions___6m2s",
-      "buttonGroup": ".index_actions-group__NWJmN"
+      "company": "[class*='company-name']",
+      "role": "[class*='job-title']",
+      "locationItems": "[class*='job-metadata-item']",
+      "description": "[class*='rating-desc']",
+      "applyButton": "[class*='apply-button']",
+      "applicantsText": "[class*='apply-time']",
+      "actionsContainer": "[class*='_actions_']",
+      "buttonGroup": "[class*='actions-group']"
     }
   }
 }
